@@ -6,6 +6,6 @@ public class Main {
         GiantModel giantModel = new GiantModel(Health.HEALTHY, Fatigue.TIRED, Nourishment.HUNGRY);
         GiantController giantController = new GiantController(giantModel, giantView );
         giantController.updateView();
-        System.out.println(giantController.getGiantModel().getFatigue());
+        System.out.println(giantController.getFatigue());
     }
 }
