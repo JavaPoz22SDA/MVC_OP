@@ -14,46 +14,46 @@ public class GiantCollectionController {
     }
 
     public void updateView(int index){
-        this.giantView.displayGiant(this.giantModel);
+        this.giantView.displayGiant(this.modelCollection.get(index));
     }
 
-    public Health getHealth(int index) {
-        return this.giantModel.getHealth();
+   public Health getHealth(int index) {
+        return this.modelCollection.get(index).getHealth();
     }
 
     public void setHealth(int index, Health health) {
-        this.giantModel.setHealth(health);
+        this.modelCollection.get(index).setHealth(health);
     }
 
     public Fatigue getFatigue(int index) {
-        return this.giantModel.getFatigue();
+        return this.modelCollection.get(index).getFatigue();
+   }
+
+   public void setFatigue(int index, Fatigue fatigue) {
+        this.modelCollection.get(index).setFatigue(fatigue);
     }
 
-    public void setFatigue(int index, Fatigue fatigue) {
-        this.giantModel.setFatigue(fatigue);
+   public Nourishment getNourishment(int index) {
+       return this.modelCollection.get(index).getNourishment();
     }
 
-    public Nourishment getNourishment(int index) {
-        return this.giantModel.getNourishment();
+   public void setNourishment(int index, Nourishment nourishment) {
+        this.modelCollection.get(index).setNourishment(nourishment);
     }
 
-    public void setNourishment(int index, Nourishment nourishment) {
-        this.giantModel.setNourishment(nourishment);
-    }
+  //  public GiantView getGiantView(int index) {
+   //     return giantView;
+  //  }
 
-    public GiantView getGiantView(int index) {
-        return giantView;
-    }
+   // public void setGiantView(int index, GiantView giantView) {
+   //     this.giantView = giantView;
+  //  }
 
-    public void setGiantView(int index, GiantView giantView) {
-        this.giantView = giantView;
-    }
+  //  public GiantModel getGiantModel(int index) {
+   //     return modelCollection.get(index);
+  //  }
 
-    public GiantModel getGiantModel(int index) {
-        return giantModel;
-    }
-
-    public void setGiantModel(int index, GiantModel giantModel) {
-        this.giantModel = giantModel;
-    }
+  //  public void setGiantModel(int index, GiantModel giantModel) {
+    //    this.giantModel = giantModel;
+   // }
 }

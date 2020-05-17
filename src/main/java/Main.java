@@ -11,15 +11,17 @@ public class Main {
         GiantModel giantModel2 = new GiantModel(Health.DEAD, Fatigue.TIRED, Nourishment.SATURATED);
 
         GiantController giantController = new GiantController(giantModel, giantView );
-        giantController.updateView();
-        System.out.println(giantController.getFatigue());
+        //giantController.updateView();
+        //System.out.println(giantController.getFatigue());
 
         List<GiantModel> modelCollection = new ArrayList<>();
         modelCollection.add(giantModel);
         modelCollection.add(giantModel);
         modelCollection.add(giantModel2);
         GiantCollectionController giantCollectionController = new GiantCollectionController(modelCollection, giantView);
-        giantCollectionController.getGiantModel(1);
+        giantCollectionController.updateView(1);
+        giantCollectionController.setHealth(1, Health.DEAD);
+        giantCollectionController.updateView(1);
 
     }
 }
