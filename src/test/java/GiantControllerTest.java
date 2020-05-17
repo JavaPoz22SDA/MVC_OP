@@ -18,16 +18,27 @@ class GiantControllerTest {
         giantController = new GiantController(giantModel, giantView);
 
     }
+
+
     @Test
     public void testSetHealth(){
+
+
        // Mockito.verify(giantModel,
         //        Mockito.times(2));
-        for( final Health health: Health.values()){
-            giantController.setHealth(health);
-            Mockito.verify(giantModel).setHealth(health);
-        }
-        giantController.getHealth();
-        Mockito.verify(giantModel).getHealth();
+
+        giantController.setHealth(Health.HEALTHY);
+        System.out.println(giantController.getHealth());
+        Mockito.when(giantController.getHealth()).thenReturn(Health.HEALTHY);
+        assertEquals(giantController.getHealth(), Health.HEALTHY);
+
+
+       /// for( final Health health: Health.values()){
+      // /     giantController.setHealth(health);
+       //    Mockito.verify(giantModel).setHealth(health);
+     //   }
+      //  giantController.getHealth();
+       // Mockito.verify(giantModel).getHealth();
 
     }
     @Test
